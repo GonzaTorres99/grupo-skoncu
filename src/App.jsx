@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import ProductsSection from './components/ProductsSection'
+import HowToOrderSection from './components/HowToOrderSection'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <AboutSection />
         <ProductsSection />
+        <HowToOrderSection />
         <ContactSection />
       </main>
       <Footer />

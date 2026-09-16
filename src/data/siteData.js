@@ -1,21 +1,24 @@
 export const quickFacts = [
   'Bordados para fuerzas de seguridad argentinas',
-  'Produccion personalizada y por volumen',
-  'Envios a todo el pais',
+  'Producción personalizada y por volumen',
+  'Pedidos online por mensaje',
 ]
 
-export const contactInfo = [
+export const contactChannels = [
   {
-    label: 'Direccion',
-    value: '139 Nro. 1169 e/ 56 y 57 - La Plata',
+    id: 'whatsapp',
+    label: 'WhatsApp',
+    action: 'Consultar por WhatsApp',
+    description: 'Contanos qué producto te interesa y conversemos sobre tu pedido.',
+    // Enlace de Grupo Skoncu publicado en el Taplink del Instagram oficial.
+    href: 'https://wa.me/message/FSE5YUKJOU2MB1',
   },
   {
-    label: 'Horario semanal',
-    value: 'Lunes a viernes de 9:30 a 13:00 y de 15:00 a 18:00 hs',
-  },
-  {
-    label: 'Horario sabados',
-    value: 'Sabados de 10:00 a 13:00 hs',
+    id: 'instagram',
+    label: 'Instagram',
+    action: 'Escribinos por Instagram',
+    description: 'Encontranos como @gruposkoncu y escribinos por el producto que elegiste.',
+    href: 'https://www.instagram.com/gruposkoncu/',
   },
 ]
 

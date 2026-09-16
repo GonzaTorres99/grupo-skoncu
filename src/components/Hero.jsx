@@ -1,5 +1,5 @@
 import { quickFacts } from '../data/siteData'
-import SocialLinks from './SocialLinks'
+import featuredShield from '../assets/images/Escudos Personalizados/WhatsApp Image 2026-09-15 at 7.03.52 PM (1).jpeg'
 
 export default function Hero() {
   return (
@@ -17,23 +17,23 @@ export default function Hero() {
             Somos Grupo <span className="text-red-600">Skoncu</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-700 sm:text-xl">
-            Realizamos bordados, parches, escudos e indumentaria operativa para
-            fuerzas de seguridad argentinas, con produccion personalizada y envios
-            a todo el pais.
+            Seguimos creando bordados, parches, escudos e indumentaria operativa
+            personalizados. Explorá nuestros productos y encargalos online por
+            WhatsApp o Instagram.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
-              href="#contacto"
+              href="#productos"
               className="inline-flex items-center justify-center rounded-full bg-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-red-700"
             >
-              Contactanos por WhatsApp
+              Explorar catálogo
             </a>
             <a
-              href="#productos"
+              href="#como-pedir"
               className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white/70 px-6 py-3 text-sm font-semibold text-zinc-900 transition hover:border-zinc-950"
             >
-              Ver productos
+              Cómo hacer tu pedido
             </a>
           </div>
 
@@ -47,25 +47,6 @@ export default function Hero() {
               </li>
             ))}
           </ul>
-
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            <div className="rounded-[1.4rem] border border-zinc-200 bg-white/80 px-5 py-4 shadow-sm">
-              <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-red-600">
-                Donde estamos
-              </p>
-              <p className="mt-2 text-sm leading-7 text-zinc-700">
-                139 Nro. 1169 e/ 56 y 57 - La Plata
-              </p>
-            </div>
-            <div className="rounded-[1.4rem] border border-zinc-200 bg-white/80 px-5 py-4 shadow-sm">
-              <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-red-600">
-                Horarios
-              </p>
-              <p className="mt-2 text-sm leading-7 text-zinc-700">
-                Lun a vie 9:30 a 13:00 y 15:00 a 18:00. Sab 10:00 a 13:00.
-              </p>
-            </div>
-          </div>
         </div>
 
         <div className="relative">
@@ -74,40 +55,28 @@ export default function Hero() {
 
           <div className="relative overflow-hidden rounded-[2rem] border border-zinc-300 bg-zinc-900 p-4 text-white shadow-[0_30px_80px_rgba(24,24,27,0.24)]">
             <div className="rounded-[1.6rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] p-5 sm:p-7">
-              <div className="flex items-center justify-between gap-4 border-b border-white/10 pb-4">
+              <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-zinc-400">
-                    Taller Skoncu
+                    Grupo Skoncu
                   </p>
                   <p className="mt-2 text-xl font-semibold">
-                    Bordado tecnico y personalizado
+                    Bordados con identidad
                   </p>
                 </div>
                 <div className="rounded-full border border-red-500/30 bg-red-500/10 px-3 py-1 text-xs font-medium text-red-300">
-                  Abierto a pedidos
+                  Pedidos online
                 </div>
               </div>
 
               <div className="mt-5 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
-                <div className="min-h-[320px] rounded-[1.4rem] border border-white/10 bg-[linear-gradient(160deg,#4b5563_0%,#18181b_48%,#09090b_100%)] p-6">
-                  <div className="flex h-full flex-col justify-between">
-                    <div className="flex items-start justify-between">
-                      <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-zinc-200">
-                        Mockup del local
-                      </span>
-                      <span className="h-3 w-3 rounded-full bg-red-500 shadow-[0_0_18px_rgba(239,68,68,0.75)]" />
-                    </div>
-                    <div>
-                      <p className="max-w-[15rem] text-3xl font-semibold leading-tight">
-                        Produccion prolija para uso real.
-                      </p>
-                      <p className="mt-3 max-w-xs text-sm leading-6 text-zinc-300">
-                        Esta area puede reemplazarse despues por una foto del local
-                        o del proceso de bordado.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={featuredShield}
+                  alt="Escudo personalizado Rastro K9 bordado en tonos negros y grises"
+                  width="963"
+                  height="1280"
+                  className="h-full min-h-[320px] w-full rounded-[1.4rem] border border-white/10 object-cover"
+                />
 
                 <div className="grid gap-4">
                   <div className="rounded-[1.4rem] border border-white/10 bg-white/5 p-5">
@@ -116,28 +85,23 @@ export default function Hero() {
                     </p>
                     <p className="mt-3 text-2xl font-semibold">Parches y escudos</p>
                     <p className="mt-2 text-sm leading-6 text-zinc-300">
-                      Visual sobrio, alta lectura y terminacion resistente.
+                      Explorá los diseños que forman parte de nuestro catálogo.
                     </p>
                   </div>
                   <div className="rounded-[1.4rem] border border-white/10 bg-white p-5 text-zinc-950">
                     <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-zinc-500">
-                      Cobertura
+                      Tu próximo pedido
                     </p>
-                    <p className="mt-3 text-4xl font-semibold text-red-600">
-                      Todo el pais
+                    <p className="mt-3 text-3xl font-semibold text-red-600">
+                      Empezá con una idea
                     </p>
                     <p className="mt-2 text-sm leading-6 text-zinc-600">
-                      Coordinamos pedidos y envios para clientes de distintas
-                      provincias.
+                      Elegí una referencia y contanos qué querés encargar.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="mt-6 flex items-center justify-end">
-            <SocialLinks />
           </div>
         </div>
       </div>

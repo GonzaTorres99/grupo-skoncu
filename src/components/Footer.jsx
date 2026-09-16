@@ -12,27 +12,25 @@ export default function Footer() {
             Bordados, escudos y parches para instituciones, equipos y pedidos
             personalizados.
           </p>
-          <p className="mt-4 max-w-xs text-sm leading-7 text-zinc-500">
-            139 Nro. 1169 e/ 56 y 57 - La Plata
-          </p>
         </div>
         <div>
-          <h3 className="text-lg font-semibold text-zinc-950">Informacion</h3>
+          <h3 className="text-lg font-semibold text-zinc-950">Información</h3>
           <div className="mt-4 flex flex-col gap-3 text-zinc-600">
             {navItems.map((item) => (
               <a key={item.label} href={item.href} className="hover:text-red-600">
                 {item.label}
               </a>
             ))}
+            <a href="#como-pedir" className="hover:text-red-600">Cómo hacer tu pedido</a>
           </div>
         </div>
         <div className="md:justify-self-end">
-          <h3 className="text-lg font-semibold text-zinc-950">Redes</h3>
+          <h3 className="text-lg font-semibold text-zinc-950">Consultas y pedidos</h3>
           <div className="mt-4">
             <SocialLinks />
           </div>
           <p className="mt-4 max-w-xs text-sm leading-7 text-zinc-500">
-            Lun a vie 9:30 a 13:00 y 15:00 a 18:00 hs. Sab 10:00 a 13:00 hs.
+            Elegí tu canal y escribinos. Te ayudamos a darle forma a tu pedido.
           </p>
         </div>
       </div>

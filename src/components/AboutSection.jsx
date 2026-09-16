@@ -43,10 +43,10 @@ export default function AboutSection() {
             </article>
             <article className="rounded-[1.6rem] border border-zinc-300 bg-zinc-950 p-6 text-white shadow-sm">
               <p className="text-3xl font-semibold text-red-400">02</p>
-              <h3 className="mt-3 text-xl font-semibold">Envios nacionales</h3>
+              <h3 className="mt-3 text-xl font-semibold">Pedidos online</h3>
               <p className="mt-2 leading-7 text-zinc-300">
-                Atendemos consultas y entregas para clientes en todo el territorio
-                argentino.
+                Conversemos por mensaje sobre el producto o la idea que querés
+                encargar.
               </p>
             </article>
           </div>

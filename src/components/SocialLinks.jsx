@@ -1,17 +1,11 @@
+import { contactChannels } from '../data/siteData'
+
 function InstagramIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" {...props}>
       <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" strokeWidth="1.8" />
       <circle cx="12" cy="12" r="4" strokeWidth="1.8" />
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-    </svg>
-  )
-}
-
-function FacebookIcon(props) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M13.4 21v-7.7h2.6l.4-3h-3V8.4c0-.9.2-1.5 1.5-1.5H16V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 4v2.2H7.4v3h2.5V21h3.5Z" />
     </svg>
   )
 }
@@ -33,21 +27,34 @@ function WhatsAppIcon(props) {
   )
 }
 
-export default function SocialLinks() {
-  const baseClass =
-    'flex h-11 w-11 items-center justify-center rounded-full border border-zinc-300/70 bg-white text-zinc-700 transition hover:-translate-y-1 hover:border-red-500 hover:text-red-600'
+const icons = { instagram: InstagramIcon, whatsapp: WhatsAppIcon }
 
+export default function SocialLinks({ expanded = false }) {
+  const baseClass = expanded
+    ? 'group flex items-start gap-4 rounded-[1.6rem] border border-white/20 bg-white/5 p-5 text-white transition-colors hover:border-red-400 hover:bg-white/10 sm:p-6'
+    : 'inline-flex min-h-11 items-center gap-2 rounded-full border border-zinc-300/70 bg-white px-4 py-2 text-sm font-medium text-zinc-700 transition-colors hover:border-red-500 hover:text-red-600'
   return (
-    <div className="flex items-center gap-3">
-      <a className={baseClass} href="#contacto" aria-label="Instagram">
-        <InstagramIcon className="h-5 w-5" />
-      </a>
-      <a className={baseClass} href="#contacto" aria-label="Facebook">
-        <FacebookIcon className="h-5 w-5" />
-      </a>
-      <a className={baseClass} href="#contacto" aria-label="WhatsApp">
-        <WhatsAppIcon className="h-5 w-5" />
-      </a>
+    <div className={expanded ? 'grid gap-4' : 'flex flex-wrap items-center gap-3'}>
+      {contactChannels.filter((channel) => channel.href).map((channel) => {
+        const Icon = icons[channel.id]
+        return (
+          <a
+            key={channel.id}
+            href={channel.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${baseClass} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-red-500`}
+          >
+            <Icon aria-hidden="true" className={expanded ? 'mt-1 h-6 w-6 shrink-0 text-red-300' : 'h-5 w-5 shrink-0'} />
+            {expanded ? (
+              <span className="min-w-0">
+                <span className="block text-lg font-semibold">{channel.action}</span>
+                <span className="mt-2 block text-sm leading-7 text-zinc-300">{channel.description}</span>
+              </span>
+            ) : channel.label}
+          </a>
+        )
+      })}
     </div>
   )
 }
