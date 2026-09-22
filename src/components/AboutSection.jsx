@@ -1,55 +1,84 @@
+import featuredShield from '../assets/images/Escudos Personalizados/WhatsApp Image 2026-09-15 at 7.03.53 PM.jpeg'
+import featuredNameTags from '../assets/images/Gafetes Personalizados/WhatsApp Image 2026-09-15 at 7.01.52 PM.jpeg'
+
+const identityNotes = [
+  {
+    title: 'Hecho para representar',
+    description: 'Nombres, símbolos e ideas que hablan de cada grupo, institución o persona.',
+  },
+  {
+    title: 'Distintas formas, una identidad',
+    description: 'Escudos, gafetes y rangos pensados para que cada pedido se sienta propio.',
+  },
+  {
+    title: 'Pedido a tu manera',
+    description: 'Nos contás qué buscás y conversamos directamente por WhatsApp o Instagram.',
+  },
+]
+
 export default function AboutSection() {
   return (
-    <section id="nosotros" className="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
-      <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div className="relative min-h-[420px]">
-          <div className="absolute left-0 top-0 w-[52%] rounded-[2rem] border border-zinc-300 bg-zinc-200 p-6 shadow-lg">
-            <div className="flex h-56 items-end rounded-[1.5rem] bg-[linear-gradient(135deg,#d6d3d1,#a8a29e)] p-5">
-              <span className="font-mono text-xs uppercase tracking-[0.28em] text-zinc-700">
-                Imagenes de productos
-              </span>
-            </div>
+    <section id="nosotros" className="scroll-mt-24 overflow-hidden bg-stone-100">
+      <div className="mx-auto grid w-full max-w-7xl gap-12 px-5 py-20 sm:px-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-center lg:gap-16">
+        <div className="relative min-h-[410px] sm:min-h-[500px]">
+          <div className="absolute inset-y-0 left-0 right-8 overflow-hidden rounded-[2rem] bg-zinc-900 shadow-[0_24px_60px_rgba(24,24,27,0.22)] sm:right-16">
+            <img
+              src={featuredShield}
+              alt="Escudo personalizado bordado junto a otros trabajos de Grupo Skoncu"
+              width="963"
+              height="1280"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/85 via-transparent to-zinc-950/15" />
+            <p className="absolute left-5 top-5 rounded-full border border-white/20 bg-zinc-950/70 px-4 py-2 font-mono text-[10px] uppercase tracking-[0.26em] text-white backdrop-blur sm:left-6 sm:top-6">
+              Trabajos por encargo
+            </p>
+            <p className="absolute bottom-6 left-6 max-w-[12rem] text-xl font-semibold leading-tight text-white sm:text-2xl">
+              Cada detalle cuenta una historia.
+            </p>
           </div>
-          <div className="absolute bottom-0 right-0 w-[68%] rounded-[2rem] border border-zinc-900 bg-zinc-900 p-6 text-white shadow-[0_22px_60px_rgba(24,24,27,0.32)]">
-            <div className="flex h-56 items-end rounded-[1.5rem] bg-[linear-gradient(135deg,#27272a,#52525b)] p-5">
-              <span className="font-mono text-xs uppercase tracking-[0.28em] text-zinc-300">
-                Galeria de bordados
-              </span>
-            </div>
+
+          <div className="absolute bottom-7 right-0 w-[42%] overflow-hidden rounded-[1.5rem] border-4 border-stone-100 bg-zinc-900 shadow-[0_18px_40px_rgba(24,24,27,0.28)] sm:bottom-10 sm:w-[40%]">
+            <img
+              src={featuredNameTags}
+              alt="Selección de gafetes personalizados bordados"
+              width="720"
+              height="1280"
+              loading="lazy"
+              className="aspect-[3/4] w-full object-cover"
+            />
+            <p className="border-t border-white/10 bg-zinc-950 px-3 py-3 text-center font-mono text-[9px] uppercase tracking-[0.2em] text-zinc-300 sm:px-4 sm:text-[10px]">
+              Identidad en cada pieza
+            </p>
           </div>
         </div>
 
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.32em] text-red-600">
-            Sobre nosotros
+            Sobre Grupo Skoncu
           </p>
-          <h2 className="mt-4 max-w-xl font-display text-4xl leading-tight tracking-[-0.04em] text-zinc-950 sm:text-6xl">
-            Bordamos identidad institucional con precision y presencia.
+          <h2 className="mt-4 max-w-2xl font-display text-4xl leading-[1.02] tracking-[-0.04em] text-zinc-950 sm:text-6xl">
+            Una identidad, llevada al bordado.
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-700">
-            Grupo Skoncu trabaja con un enfoque claro: piezas sobrias, legibles y
-            duraderas para clientes que necesitan representar pertenencia,
-            jerarquia y profesionalismo. Nuestro foco esta en fuerzas de
-            seguridad, aunque tambien realizamos pedidos especiales y desarrollos
-            personalizados.
+          <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-700 sm:text-lg">
+            Creamos escudos, gafetes, rangos y otros trabajos personalizados para
+            representar aquello que identifica a cada pedido.
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <article className="rounded-[1.6rem] border border-zinc-300 bg-white p-6 shadow-sm">
-              <p className="text-3xl font-semibold text-red-600">01</p>
-              <h3 className="mt-3 text-xl font-semibold">Trabajo a medida</h3>
-              <p className="mt-2 leading-7 text-zinc-600">
-                Adaptamos diseno, formato, color y cantidad segun cada necesidad.
-              </p>
-            </article>
-            <article className="rounded-[1.6rem] border border-zinc-300 bg-zinc-950 p-6 text-white shadow-sm">
-              <p className="text-3xl font-semibold text-red-400">02</p>
-              <h3 className="mt-3 text-xl font-semibold">Pedidos online</h3>
-              <p className="mt-2 leading-7 text-zinc-300">
-                Conversemos por mensaje sobre el producto o la idea que querés
-                encargar.
-              </p>
-            </article>
-          </div>
+
+          <ol className="mt-8 border-b border-zinc-300">
+            {identityNotes.map((note, index) => (
+              <li key={note.title} className="grid grid-cols-[2.5rem_1fr] gap-3 border-t border-zinc-300 py-4 sm:grid-cols-[3.5rem_1fr] sm:gap-4 sm:py-5">
+                <span aria-hidden="true" className="pt-1 font-mono text-xs tracking-[0.18em] text-red-600">
+                  0{index + 1}
+                </span>
+                <div className="sm:grid sm:grid-cols-[0.85fr_1.15fr] sm:gap-5">
+                  <h3 className="text-base font-semibold text-zinc-950 sm:text-lg">{note.title}</h3>
+                  <p className="mt-1 text-sm leading-6 text-zinc-600 sm:mt-0">{note.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>

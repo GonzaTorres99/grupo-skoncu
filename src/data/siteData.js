@@ -4,14 +4,17 @@ export const quickFacts = [
   'Pedidos online por mensaje',
 ]
 
+export const whatsappNumber = '5492216744775'
+export const whatsappInitialMessage = 'Hola, vengo desde la web y quiero consultar por un pedido de:'
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappInitialMessage)}`
+
 export const contactChannels = [
   {
     id: 'whatsapp',
     label: 'WhatsApp',
     action: 'Consultar por WhatsApp',
     description: 'Contanos qué producto te interesa y conversemos sobre tu pedido.',
-    // Enlace de Grupo Skoncu publicado en el Taplink del Instagram oficial.
-    href: 'https://wa.me/message/FSE5YUKJOU2MB1',
+    href: whatsappUrl,
   },
   {
     id: 'instagram',
