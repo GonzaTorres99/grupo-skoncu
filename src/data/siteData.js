@@ -4,7 +4,7 @@ export const quickFacts = [
   'Pedidos online por mensaje',
 ]
 
-export const whatsappNumber = '5492216744775'
+export const whatsappNumber = '5492216404806'
 export const whatsappInitialMessage = 'Hola, vengo desde la web y quiero consultar por un pedido de:'
 export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappInitialMessage)}`
 
